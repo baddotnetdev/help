@@ -58,7 +58,7 @@ namespace testni_zadatak.Model
                 GmlFeature dbTable = new GmlFeature();
                 if (featureModel.Id > 0)
                 {
-                    dbTable = _context.GmlFeatures.Where(d => d.Id.Equals(featureModel.Id)).FirstOrDefault() ?? new GmlFeature();
+                    dbTable = _context.GmlFeatures.Where(d => d.Id.Equals(featureModel.Id)).FirstOrDefault(); //?? new GmlFeature();
                     if (dbTable != null)
                     {
                         // PUT (ka update ali ne znan sta bi updatea pa san samo navea random parametre)
@@ -114,7 +114,7 @@ namespace testni_zadatak.Model
                 GmlCoordinate dbTable = new GmlCoordinate();
                 if (coordinate.GmlFeatureId > 0)
                 {
-                    dbTable = _context.GmlCoordinates.Where(d => d.GmlFeatureId.Equals(coordinate.GmlFeatureId)).FirstOrDefault() ?? new GmlCoordinate();
+                    dbTable = _context.GmlCoordinates.Where(d => d.GmlFeatureId.Equals(coordinate.GmlFeatureId)).FirstOrDefault(); //?? new GmlCoordinate();
                     if (dbTable != null)
                     {
                         // PUT (ka update ali ne znan sta bi updatea pa san samo navea random parametre)
