@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\testni_zadatak.props" />
-</Project>
